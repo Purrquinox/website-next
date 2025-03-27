@@ -4,7 +4,7 @@ import SEO from '@/components/SEO/SEO';
 const ErrorPage = () => {
 	return (
 		<>
-			<SEO title="Page Not Found - Luvix Social" />
+			<SEO title="Page Not Found - Purrquinox" />
 			<ErrorComp
 				Status={404}
 				Message="Page Not Found"
