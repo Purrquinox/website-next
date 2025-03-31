@@ -80,7 +80,7 @@ const applications: Application[] = [
 
 const apply = () => {
 	return (
-		<main className="p-6">
+		<>
 			<Meta title="Staff Applications - Purrquinox" />
 
 			<Breadcrumb
@@ -99,7 +99,7 @@ const apply = () => {
 					<div className="p-2" />
 				</div>
 			))}
-		</main>
+		</>
 	);
 };
 
