@@ -29,6 +29,7 @@ const projects = () => {
 									longImage={project.banner || null}
 									link={project.link}
 									flairs={project.tags}
+                                    socialLinks={project.socialLinks}
 								/>
 							</div>
 						</>

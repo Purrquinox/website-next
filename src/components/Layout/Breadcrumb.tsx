@@ -7,11 +7,11 @@ interface BreadcrumbProps {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, description }) => {
 	return (
-		<nav aria-label="breadcrumb" className="text-center md:text-left">
+		<nav aria-label="breadcrumb" className="text-center md:text-left md:ml-5">
 			<h1 className="font-monster text-3xl font-bold lg:text-5xl">{title}</h1>
 
 			{description && (
-				<p className="text-md lg:text-1xl ml-2 pb-2 font-monster font-medium first:mt-0">
+				<p className="text-md lg:text-1xl pb-2 font-monster font-medium first:mt-0">
 					{description}
 				</p>
 			)}

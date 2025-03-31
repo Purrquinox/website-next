@@ -1,4 +1,9 @@
 // Projects
+interface SocialLink {
+	platform: 'github' | 'twitter' | 'linkedin' | 'instagram' | 'website';
+	url: string;
+}
+
 interface ProjectType {
 	name: string;
 	description: string;
@@ -6,6 +11,7 @@ interface ProjectType {
 	image: string | null;
 	banner?: string | null;
 	tags: string[];
+	socialLinks?: SocialLink[];
 }
 
 const projects: ProjectType[] = [
@@ -15,7 +21,21 @@ const projects: ProjectType[] = [
 			"Hey, neurodivergent friends! Tired of your thoughts being dismissed? Welcome to Sparkyflight – the virtual haven where your ideas soar without fear of judgment. Speak your mind, share your brilliance, and let's fly high together!",
 		link: 'https://sparkyflight.xyz/',
 		image: 'https://sparkyflight.xyz/logo.png',
-		tags: ['SOCIAL MEDIA']
+		tags: ['SOCIAL MEDIA'],
+		socialLinks: [
+			{
+				platform: 'github',
+				url: 'https://github.com/Sparkyflight'
+			},
+			{
+				platform: 'twitter',
+				url: 'https://twitter.com/sparkyflightapp'
+			},
+			{
+				platform: 'website',
+				url: 'https://sparkyflight.xyz/'
+			}
+		]
 	},
 	{
 		name: 'AntiRaid',
@@ -23,7 +43,42 @@ const projects: ProjectType[] = [
 			'AntiRaid is a Automatic Moderation Service created to protect your Discord Server from threats, unsafe bots and spamming using our advanced technology!',
 		link: 'https://antiraid.xyz/',
 		image: 'https://antiraid.xyz/logo.webp',
-		tags: ['DISCORD']
+		tags: ['DISCORD'],
+		socialLinks: [
+			{
+				platform: 'github',
+				url: 'https://github.com/Anti-Raid'
+			},
+			{
+				platform: 'twitter',
+				url: 'https://twitter.com/heyantiraid'
+			},
+			{
+				platform: 'website',
+				url: 'https://antiraid.xyz/'
+			}
+		]
+	},
+	{
+		name: 'Luvix Social',
+		description: 'Redefining Connection in a Seamless, Privacy-Focused World.',
+		link: 'https://luvix.social/',
+		image: 'https://luvix.social/logo.png',
+		tags: ['Social Media'],
+		socialLinks: [
+			{
+				platform: 'github',
+				url: 'https://github.com/LuvixSocial'
+			},
+			{
+				platform: 'twitter',
+				url: 'https://twitter.com/heyluvixsocial'
+			},
+			{
+				platform: 'website',
+				url: 'https://luvix.social/'
+			}
+		]
 	},
 	{
 		name: 'Chlamydia',
@@ -47,14 +102,6 @@ const projects: ProjectType[] = [
 		link: 'https://github.com/Purrquinox/KonsoOS',
 		image: null,
 		tags: ['System Management', 'Linux']
-	},
-	{
-		name: 'Luvix Social',
-		description: 'Redefining Connection in a Seamless, Privacy-Focused World.',
-		link: 'https://luvix.social/',
-		image: 'https://luvix.social/logo.png',
-		banner: 'https://luvix.social/banner.jpg',
-		tags: ['Social Media']
 	}
 ];
 

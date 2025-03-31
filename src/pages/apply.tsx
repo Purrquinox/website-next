@@ -81,20 +81,22 @@ const applications: Application[] = [
 		description:
 			"We're looking for a highly motivated Product Manager to lead the development of innovative products. You will be responsible for defining product vision, strategy, and roadmaps, and collaborating with engineering and design teams to bring products to market.",
 		benefits: {
-			'Leadership opportunities': 'Lead product teams and shape the future of our technology offerings.',
+			'Leadership opportunities':
+				'Lead product teams and shape the future of our technology offerings.',
 			'Cross-functional collaboration': 'Work with engineering, design, and marketing teams.',
 			'Market impact': 'Drive product success and contribute to business growth.'
 		},
 		requirements: {
-			'Experience': 'At least 3 years of experience in product management or related roles.',
-			'Analytical skills': 'Ability to analyze market trends and user feedback to drive product decisions.',
-			'Communication skills': 'Strong verbal and written communication skills to align teams and stakeholders.'
+			Experience: 'At least 3 years of experience in product management or related roles.',
+			'Analytical skills':
+				'Ability to analyze market trends and user feedback to drive product decisions.',
+			'Communication skills':
+				'Strong verbal and written communication skills to align teams and stakeholders.'
 		},
 		faq: {
 			'What industries do you work in?':
-				"We focus on technology-driven industries, including SaaS, AI, and cloud computing.",
-			'Is remote work available?':
-				"Yes, we offer flexible remote work options."
+				'We focus on technology-driven industries, including SaaS, AI, and cloud computing.',
+			'Is remote work available?': 'Yes, we offer flexible remote work options.'
 		},
 		fields: [
 			{
@@ -119,13 +121,14 @@ const applications: Application[] = [
 			'Career growth': 'Opportunities for skill development and career advancement.'
 		},
 		requirements: {
-			'Portfolio': 'Strong portfolio showcasing UX/UI design work.',
-			'Tools': 'Proficiency with design tools like Figma, Sketch, or Adobe XD.',
+			Portfolio: 'Strong portfolio showcasing UX/UI design work.',
+			Tools: 'Proficiency with design tools like Figma, Sketch, or Adobe XD.',
 			'User research': 'Experience with user testing and research methodologies.'
 		},
 		faq: {
-			'What design tools do you use?': "We primarily use Figma, Sketch, and Adobe Creative Suite.",
-			'Is a design degree required?': "No, but strong experience and a solid portfolio are essential."
+			'What design tools do you use?': 'We primarily use Figma, Sketch, and Adobe Creative Suite.',
+			'Is a design degree required?':
+				'No, but strong experience and a solid portfolio are essential.'
 		},
 		fields: [
 			{
@@ -163,10 +166,10 @@ const apply = () => {
 					<div className="p-2" />
 				</div>
 			))}
-        
-            <div className="p-2" />
 
-            <p>{JSON.stringify(applications, null, 2)}</p>
+			<div className="p-2" />
+
+			<p>{JSON.stringify(applications, null, 2)}</p>
 		</>
 	);
 };
