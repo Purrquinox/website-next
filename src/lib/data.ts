@@ -4,6 +4,7 @@ interface ProjectType {
 	description: string;
 	link: string;
 	image: string | null;
+	banner?: string | null;
 	tags: string[];
 }
 
@@ -52,6 +53,7 @@ const projects: ProjectType[] = [
 		description: 'Redefining Connection in a Seamless, Privacy-Focused World.',
 		link: 'https://luvix.social/',
 		image: 'https://luvix.social/logo.png',
+		banner: 'https://luvix.social/banner.jpg',
 		tags: ['Social Media']
 	}
 ];

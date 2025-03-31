@@ -26,6 +26,7 @@ const projects = () => {
 									name={project.name}
 									description={project.description}
 									image={project.image}
+									longImage={project.banner || null}
 									link={project.link}
 									flairs={project.tags}
 								/>
