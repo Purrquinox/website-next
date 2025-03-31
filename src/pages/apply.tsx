@@ -99,6 +99,10 @@ const apply = () => {
 					<div className="p-2" />
 				</div>
 			))}
+        
+            <div className="p-2" />
+
+            <p>{JSON.stringify(applications, null, 2)}</p>
 		</>
 	);
 };
