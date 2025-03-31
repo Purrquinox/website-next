@@ -15,7 +15,7 @@ interface Props {
 
 const Card = ({ name, description, image, longImage, link = '/', flairs }: Props) => {
 	return (
-		<ShadCard className="bg-card max-w-sm rounded-lg border p-3 shadow-md hover:bg-card/75">
+		<ShadCard className="max-w-sm rounded-lg border bg-card p-3 shadow-md hover:bg-card/75">
 			<Link href={link || '#'} className="block">
 				{flairs && flairs.length > 0 && (
 					<div className="flex space-x-2">
