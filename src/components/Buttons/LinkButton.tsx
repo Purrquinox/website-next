@@ -15,7 +15,7 @@ const LinkButton = ({ name, href, className, icon: Icon }: LinkButtonProps) => {
 		<Link href={href} className={`${className}`}>
 			<Button
 				variant="outline"
-				className="group h-10 justify-between rounded-md border-border bg-card p-4 text-sm font-medium text-card-foreground shadow-sm transition-all duration-300 hover:bg-card/90 hover:shadow-md"
+				className="group h-10 justify-between rounded-md border-border bg-card px-2 py-6 text-sm font-medium text-card-foreground shadow-sm transition-all duration-300 hover:bg-card/90 hover:shadow-md"
 			>
 				<div className="flex items-center">
 					<div className="mr-2 rounded-full bg-primary p-1">
