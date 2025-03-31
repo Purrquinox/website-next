@@ -48,7 +48,7 @@ const ProjectCard = ({ name, description, image, longImage, link, flairs }: Prop
 				<div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
 				{/* Main card content */}
-				<div className="relative z-10 py-3 px-4">
+				<div className="relative z-10 px-4 py-3">
 					{/* Top flair badge */}
 					{flairs && flairs.length > 0 && (
 						<div className="mb-2">
