@@ -63,7 +63,7 @@ const Meta = ({
 			<link rel="me" href="https://mastodon.social/@purrquinox" />
 
 			{/* Favicon */}
-			<link rel="icon" type="image/x-icon" href="/transparent.png" />
+			<link rel="icon" type="image/x-icon" href="/favicon.png" />
 
 			{/* Theme Colors */}
 			<meta name="theme-color" content="#710AF5" />
