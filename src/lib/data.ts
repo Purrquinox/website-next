@@ -58,5 +58,23 @@ const projects: ProjectType[] = [
 	}
 ];
 
-export { projects };
-export type { ProjectType };
+// Partners
+interface PartnerType {
+	name: string;
+	description: string;
+	link: string;
+	image: string;
+}
+
+const partners: PartnerType[] = [
+	{
+		name: 'Infinity List',
+		description: 'Begin your Discord journey with our extensive directory.',
+		link: 'https://infinitybots.gg/',
+		image: 'https://cdn.infinitybots.gg/core/full_logo.webp'
+	}
+];
+
+// Export
+export { projects, partners };
+export type { ProjectType, PartnerType };
