@@ -285,6 +285,89 @@ const applications: Application[] = [
 	}
 ];
 
+// Staff Members
+interface StaffMember {
+	name: string;
+	username: string;
+	roles: string[];
+	image: string;
+	socials?: SocialLink[];
+}
+
+const staffMembers: StaffMember[] = [
+	{
+		name: 'Select',
+		username: 'selectdev',
+		roles: ['Founder', 'CEO'],
+		image: 'https://selectdev.me/logo.png',
+		socials: [
+			{
+				platform: 'github',
+				url: 'https://github.com/selectdev'
+			}
+		]
+	},
+	{
+		name: 'Ilieff',
+		username: 'scarlet_dev',
+		roles: ['Owner of AntiRaid'],
+		image: 'https://portfolio.antiraid.xyz/images/me.png',
+		socials: [
+			{
+				platform: 'github',
+				url: 'https://github.com/whiteewolf'
+			}
+		]
+	},
+	{
+		name: 'Maya',
+		username: 'ranveersoni',
+		roles: ['Lead Frontend Developer'],
+		image: 'https://maya25-me.vercel.app/_next/image?url=%2Ficon.png&w=640&q=75',
+		socials: [
+			{
+				platform: 'twitter',
+				url: 'https://x.com/ranveersoni98'
+			},
+			{
+				platform: 'github',
+				url: 'https://github.com/Miya25'
+			}
+		]
+	},
+	{
+		name: 'Toxic Dev',
+		username: 'therealtoxicdev',
+		roles: ['Supervisor'],
+		image: 'https://toxicdev.me/logo.png',
+		socials: [
+			{
+				platform: 'github',
+				url: 'https://github.com/therealtoxicdev'
+			},
+			{
+				platform: 'twitter',
+				url: 'https://x.com/therealtoxicdev'
+			},
+			{
+				platform: 'website',
+				url: 'https://toxicdev.me/'
+			},
+			{
+				platform: 'linkedin',
+				url: 'https://www.linkedin.com/in/TheRealToxicDev'
+			}
+		]
+	}
+];
+
 // Export
-export { projects, partners, applications };
-export type { ProjectType, PartnerType, Application, ApplicationField, ApplicationFieldType };
+export { projects, partners, applications, staffMembers };
+export type {
+	ProjectType,
+	PartnerType,
+	Application,
+	ApplicationField,
+	ApplicationFieldType,
+	StaffMember
+};
