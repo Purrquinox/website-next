@@ -358,6 +358,13 @@ const staffMembers: StaffMember[] = [
 				url: 'https://www.linkedin.com/in/TheRealToxicDev'
 			}
 		]
+	},
+	{
+		name: 'Rootspring',
+		username: 'rootspring',
+		roles: ['Lead Backend Developer of AntiRaid'],
+		image: '',
+		socials: []
 	}
 ];
 

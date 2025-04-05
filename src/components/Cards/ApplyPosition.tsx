@@ -36,7 +36,7 @@ const ApplyPosition = ({ application }: StaffApplicationCardProps) => {
 			[section]: !prev[section]
 		}));
 	};
-    
+
 	return (
 		<Card className="mx-auto w-full max-w-3xl">
 			<CardHeader>
@@ -45,9 +45,7 @@ const ApplyPosition = ({ application }: StaffApplicationCardProps) => {
 						<CardTitle className="text-2xl font-bold">{application.title}</CardTitle>
 						<CardDescription className="mt-2">{application.description}</CardDescription>
 					</div>
-					<Badge variant="outline">
-						OPEN
-					</Badge>
+					<Badge variant="outline">OPEN</Badge>
 				</div>
 			</CardHeader>
 			<CardContent className="space-y-6">
