@@ -2,7 +2,7 @@
 import PageHeader from '@/components/Layout/PageHeader';
 import Meta from '@/components/SEO/SEO';
 import { applications } from '@/lib/data';
-import ApplyPosition from '@/components/Card/ApplyPosition';
+import ApplyPosition from '@/components/Cards/ApplyPosition';
 
 const apply = () => {
 	return (
