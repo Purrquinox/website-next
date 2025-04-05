@@ -17,16 +17,18 @@ const projects = () => {
 				description="Explore our projects and see what we are working on."
 			/>
 
-			<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-				{projectsList.map((project: ProjectType) => {
-					return (
-						<>
-							<div className="mx-3 inline-grid self-auto">
-								<ProjectCard project={project} />
-							</div>
-						</>
-					);
-				})}
+			<div className="flex items-center justify-center">
+				<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+					{projectsList.map((project: ProjectType) => {
+						return (
+							<>
+								<div className="mx-3 inline-grid self-auto">
+									<ProjectCard project={project} />
+								</div>
+							</>
+						);
+					})}
+				</div>
 			</div>
 		</>
 	);

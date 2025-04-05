@@ -17,16 +17,18 @@ const partners = () => {
 				description="Explore our amazing partners who help us make Purrquinox a reality. We are grateful for their support and collaboration."
 			/>
 
-			<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-				{partnerList.map((partner: PartnerType) => {
-					return (
-						<>
-							<div className="mx-3 inline-grid self-auto">
-								<PartnerCard partner={partner} />
-							</div>
-						</>
-					);
-				})}
+			<div className="flex items-center justify-center">
+				<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+					{partnerList.map((partner: PartnerType) => {
+						return (
+							<>
+								<div className="mx-3 inline-grid self-auto">
+									<PartnerCard partner={partner} />
+								</div>
+							</>
+						);
+					})}
+				</div>
 			</div>
 		</>
 	);
