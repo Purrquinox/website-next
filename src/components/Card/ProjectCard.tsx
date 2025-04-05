@@ -7,34 +7,16 @@ import { ExternalLink, Github, Twitter, Linkedin, Instagram, Globe } from 'lucid
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ShadCN/badge';
 import { Card } from '@/components/ShadCN/card';
-
-interface SocialLink {
-	platform: 'github' | 'twitter' | 'linkedin' | 'instagram' | 'website';
-	url: string;
-}
+import { ProjectType } from '@/lib/data';
 
 interface ProjectCardProps {
-	name: string;
-	description: string;
-	image?: string | null;
-	longImage?: string | null;
-	link?: string | null;
-	flairs?: string[] | null;
-	socialLinks?: SocialLink[];
+	project: ProjectType;
 }
 
-const ProjectCard = ({
-	name,
-	description,
-	image,
-	longImage,
-	link,
-	flairs = [],
-	socialLinks = []
-}: ProjectCardProps) => {
+const ProjectCard = ({ project }: ProjectCardProps) => {
 	const [isHovered, setIsHovered] = useState(false);
-	const hasFlairs = flairs && flairs.length > 0;
-	const hasLongImage = !!longImage;
+	const hasFlairs = project.tags && project.tags.length > 0;
+	const hasLongImage = !!project.banner;
 
 	const getSocialIcon = (platform: string) => {
 		switch (platform) {
@@ -57,7 +39,7 @@ const ProjectCard = ({
 		<Card
 			className={cn(
 				'group relative h-full overflow-hidden border-0 bg-gradient-to-br from-zinc-900 to-zinc-950 text-white shadow-lg transition-all duration-300',
-				link && 'hover:shadow-xl hover:shadow-primary/10',
+				project.link && 'hover:shadow-xl hover:shadow-primary/10',
 				isHovered && 'scale-[1.02]',
 				hasLongImage ? 'pb-48' : ''
 			)}
@@ -73,17 +55,17 @@ const ProjectCard = ({
 				{hasFlairs && (
 					<div className="mb-2">
 						<Badge className="bg-primary px-3 py-1 font-medium uppercase tracking-wider text-primary-foreground shadow-md">
-							{flairs[0]}
+							{project.tags[0]}
 						</Badge>
 					</div>
 				)}
 
 				<div className="flex flex-row items-center gap-4 pb-4">
 					{/* Logo/Image */}
-					{image && (
+					{project.image && (
 						<div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white/10 p-0.5 ring-2 ring-white/20">
 							<Image
-								src={image || '/placeholder.svg'}
+								src={project.image || '/regular.png'}
 								alt={`${name} logo`}
 								width={48}
 								height={48}
@@ -94,8 +76,8 @@ const ProjectCard = ({
 
 					{/* Project name */}
 					<div className="flex items-center gap-2">
-						<h3 className="text-xl font-bold tracking-tight text-white">{name}</h3>
-						{link && (
+						<h3 className="text-xl font-bold tracking-tight text-white">{project.name}</h3>
+						{project.link && (
 							<ExternalLink className="h-4 w-4 opacity-70 transition-opacity group-hover:opacity-100" />
 						)}
 					</div>
@@ -103,12 +85,12 @@ const ProjectCard = ({
 
 				{/* Description */}
 				<div className="space-y-5">
-					<p className="text-sm leading-relaxed text-zinc-300">{description}</p>
+					<p className="text-sm leading-relaxed text-zinc-300">{project.description}</p>
 
 					{/* Additional flairs */}
-					{hasFlairs && flairs.length > 1 && (
+					{hasFlairs && project.tags.length > 1 && (
 						<div className="mb-2 flex flex-wrap gap-2">
-							{flairs.slice(1).map((flair) => (
+							{project.tags.slice(1).map((flair) => (
 								<Badge
 									key={flair}
 									variant="secondary"
@@ -121,9 +103,9 @@ const ProjectCard = ({
 					)}
 
 					{/* Social Media Links */}
-					{socialLinks.length > 0 && (
+					{(project.socials || []).length > 0 && (
 						<div className="flex flex-wrap gap-3 pt-1">
-							{socialLinks.map((social, index) => (
+							{(project.socials || []).map((social, index) => (
 								<a
 									key={index}
 									href={social.url}
@@ -146,7 +128,7 @@ const ProjectCard = ({
 				<div className="absolute bottom-0 left-0 right-0 h-44 w-full overflow-hidden">
 					<div className="absolute inset-0 z-10 bg-gradient-to-b from-zinc-900/0 via-zinc-900/50 to-zinc-900" />
 					<Image
-						src={longImage}
+						src={project.banner || '/banner.png'}
 						alt={`${name} preview`}
 						fill
 						className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
@@ -159,10 +141,10 @@ const ProjectCard = ({
 		</Card>
 	);
 
-	if (link) {
+	if (project.link) {
 		return (
 			<Link
-				href={link}
+				href={project.link}
 				className="block h-full no-underline outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
 			>
 				{cardContent}

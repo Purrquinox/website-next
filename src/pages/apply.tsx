@@ -1,149 +1,8 @@
 'use client';
 import Breadcrumb from '@/components/Layout/Breadcrumb';
 import Meta from '@/components/SEO/SEO';
-import Card from '@/components/Layout/Card';
-
-interface Application {
-	title: string;
-	description: string;
-	benefits: { [key: string]: string };
-	requirements: { [key: string]: string };
-	faq: { [key: string]: string };
-	fields: ApplicationField[];
-}
-
-interface ApplicationField {
-	name: string;
-	description: string;
-	type: ApplicationFieldType;
-	minLength: number | null;
-	maxLength: number | null;
-	pattern: RegExp | null;
-	options: string[] | null;
-	optional: boolean;
-}
-
-enum ApplicationFieldType {
-	Text,
-	TextBox,
-	Number,
-	Dropdown,
-	Checkbox,
-	Radio,
-	Date,
-	File,
-	Markdown
-}
-
-const applications: Application[] = [
-	{
-		title: 'Software Engineer',
-		description:
-			"We're looking for a talented software engineer to join our team. Our team is focused on delivering cutting-edge technology, and we're looking for someone who can contribute to our mission and make a positive impact on our clients' businesses.",
-		benefits: {
-			'Strong technical skills':
-				'Experience with modern software development technologies such as JavaScript, TypeScript, React, and Node.js.',
-			'In-depth knowledge of cloud computing':
-				'Familiarity with cloud platforms like AWS, GCP, or Azure.',
-			'Experience with agile methodologies':
-				'Familiarity with Scrum, Kanban, or other agile development methodologies.',
-			'Experience with version control systems':
-				'Familiarity with Git or other version control systems.'
-		},
-		requirements: {
-			'Professional experience': 'At least 5 years of relevant software engineering experience.',
-			'Strong communication skills':
-				'Excellent written and verbal communication skills, and ability to work well in a team environment.',
-			'Experience with modern software development tools':
-				'Familiarity with tools like React, Angular, or Vue.js.'
-		},
-		faq: {
-			'Can I apply for multiple positions?':
-				"Yes, you can apply for multiple positions. However, please make sure that you're applying for the position that best aligns with your skills and interests.",
-			"What if I'm not a software engineer?":
-				"We're always interested in candidates who have a passion for technology and are excited about the future of work. If you're not a software engineer, we'd love to hear from you!"
-		},
-		fields: [
-			{
-				name: 'Name',
-				description: 'Your full name.',
-				type: ApplicationFieldType.Text,
-				minLength: 2,
-				maxLength: 50,
-				pattern: /^[a-zA-Z\s]+$/,
-				options: null,
-				optional: false
-			}
-		]
-	},
-	{
-		title: 'Product Manager',
-		description:
-			"We're looking for a highly motivated Product Manager to lead the development of innovative products. You will be responsible for defining product vision, strategy, and roadmaps, and collaborating with engineering and design teams to bring products to market.",
-		benefits: {
-			'Leadership opportunities':
-				'Lead product teams and shape the future of our technology offerings.',
-			'Cross-functional collaboration': 'Work with engineering, design, and marketing teams.',
-			'Market impact': 'Drive product success and contribute to business growth.'
-		},
-		requirements: {
-			Experience: 'At least 3 years of experience in product management or related roles.',
-			'Analytical skills':
-				'Ability to analyze market trends and user feedback to drive product decisions.',
-			'Communication skills':
-				'Strong verbal and written communication skills to align teams and stakeholders.'
-		},
-		faq: {
-			'What industries do you work in?':
-				'We focus on technology-driven industries, including SaaS, AI, and cloud computing.',
-			'Is remote work available?': 'Yes, we offer flexible remote work options.'
-		},
-		fields: [
-			{
-				name: 'Name',
-				description: 'Your full name.',
-				type: ApplicationFieldType.Text,
-				minLength: 2,
-				maxLength: 50,
-				pattern: /^[a-zA-Z\s]+$/,
-				options: null,
-				optional: false
-			}
-		]
-	},
-	{
-		title: 'UX/UI Designer',
-		description:
-			"We're looking for a creative and user-centric UX/UI Designer to craft exceptional digital experiences. You'll work closely with product and engineering teams to design intuitive interfaces and improve user engagement.",
-		benefits: {
-			'Creative environment': 'Work on exciting and visually compelling projects.',
-			'User impact': 'Shape how users interact with our products.',
-			'Career growth': 'Opportunities for skill development and career advancement.'
-		},
-		requirements: {
-			Portfolio: 'Strong portfolio showcasing UX/UI design work.',
-			Tools: 'Proficiency with design tools like Figma, Sketch, or Adobe XD.',
-			'User research': 'Experience with user testing and research methodologies.'
-		},
-		faq: {
-			'What design tools do you use?': 'We primarily use Figma, Sketch, and Adobe Creative Suite.',
-			'Is a design degree required?':
-				'No, but strong experience and a solid portfolio are essential.'
-		},
-		fields: [
-			{
-				name: 'Name',
-				description: 'Your full name.',
-				type: ApplicationFieldType.Text,
-				minLength: 2,
-				maxLength: 50,
-				pattern: /^[a-zA-Z\s]+$/,
-				options: null,
-				optional: false
-			}
-		]
-	}
-];
+import { applications } from '@/lib/data';
+import ApplyPosition from '@/components/Card/ApplyPosition';
 
 const apply = () => {
 	return (
@@ -155,21 +14,15 @@ const apply = () => {
 				description="Our team is built on collaboration and shared passion, and we're always looking for dedicated individuals to join us. We value creativity, teamwork, and a drive to make a difference. If you're ready to bring your unique skills to the table, we’d love to hear from you!"
 			/>
 
-			{applications.map((application, index) => (
-				<div key={index}>
-					<Card
-						name={application.title}
-						description={application.description}
-						image={null}
-						link={null}
-					/>
-					<div className="p-2" />
-				</div>
-			))}
-
-			<div className="p-2" />
-
-			<p>{JSON.stringify(applications, null, 2)}</p>
+			<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+				{applications.map((application) => (
+					<>
+						<div className="mx-3 inline-grid self-auto">
+							<ApplyPosition application={application} />
+						</div>
+					</>
+				))}
+			</div>
 		</>
 	);
 };

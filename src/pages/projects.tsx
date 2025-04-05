@@ -1,5 +1,5 @@
 import SEO from '@/components/SEO/SEO';
-import ProjectCard from '@/components/Layout/ProjectCard';
+import ProjectCard from '@/components/Card/ProjectCard';
 import { projects as Projects, type ProjectType } from '@/lib/data.ts';
 import Breadcrumb from '@/components/Layout/Breadcrumb';
 
@@ -22,15 +22,7 @@ const projects = () => {
 					return (
 						<>
 							<div className="mx-3 inline-grid self-auto">
-								<ProjectCard
-									name={project.name}
-									description={project.description}
-									image={project.image}
-									longImage={project.banner || null}
-									link={project.link}
-									flairs={project.tags}
-									socialLinks={project.socials}
-								/>
+								<ProjectCard project={project} />
 							</div>
 						</>
 					);

@@ -1,5 +1,5 @@
 import SEO from '@/components/SEO/SEO';
-import PartnerCard from '@/components/Layout/PartnerCard';
+import PartnerCard from '@/components/Card/PartnerCard';
 import { partners as list, PartnerType } from '@/lib/data.ts';
 import Breadcrumb from '@/components/Layout/Breadcrumb';
 
