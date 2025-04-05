@@ -36,9 +36,7 @@ const ApplyPosition = ({ application }: StaffApplicationCardProps) => {
 			[section]: !prev[section]
 		}));
 	};
-
-	const requiredFieldsCount = application.fields.filter((field) => !field.optional).length;
-
+    
 	return (
 		<Card className="mx-auto w-full max-w-3xl">
 			<CardHeader>
@@ -47,8 +45,8 @@ const ApplyPosition = ({ application }: StaffApplicationCardProps) => {
 						<CardTitle className="text-2xl font-bold">{application.title}</CardTitle>
 						<CardDescription className="mt-2">{application.description}</CardDescription>
 					</div>
-					<Badge variant="outline" className="border-green-200 bg-green-50 text-green-700">
-						Open Position
+					<Badge variant="outline">
+						OPEN
 					</Badge>
 				</div>
 			</CardHeader>
@@ -142,23 +140,6 @@ const ApplyPosition = ({ application }: StaffApplicationCardProps) => {
 						</ul>
 					</CollapsibleContent>
 				</Collapsible>
-
-				{/* Application Fields Summary */}
-				<div className="mt-6 rounded-lg bg-muted p-4">
-					<h3 className="mb-2 text-lg font-medium">Application Details</h3>
-					<div className="flex flex-wrap gap-2">
-						<div className="text-sm">
-							<span className="font-medium">{application.fields.length}</span> fields to complete
-						</div>
-						<div className="text-sm">
-							<span className="font-medium">{requiredFieldsCount}</span> required fields
-						</div>
-						<div className="text-sm">
-							<span className="font-medium">{application.fields.length - requiredFieldsCount}</span>{' '}
-							optional fields
-						</div>
-					</div>
-				</div>
 			</CardContent>
 			<CardFooter className="flex justify-between border-t pt-6">
 				<Button variant="outline">Save for Later</Button>
