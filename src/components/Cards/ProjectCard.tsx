@@ -66,7 +66,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 						<div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white/10 p-0.5 ring-2 ring-white/20">
 							<Image
 								src={project.image || '/regular.png'}
-								alt={`${name} logo`}
+								alt={`${project.name} logo`}
 								width={48}
 								height={48}
 								className="h-full w-full rounded-full object-cover"

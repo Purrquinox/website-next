@@ -3,22 +3,22 @@ import Link from 'next/link';
 import { Button as ButtonUse } from '../ShadCN/button';
 
 interface ButtonInt {
-	Name: string;
-	Function: () => void;
+	name: string;
+	function: () => void;
 }
 
 interface ErrorPageProps {
-	Status?: number;
-	Message?: string;
-	SubText?: string;
-	Button?: ButtonInt | null;
+	status?: number;
+	message?: string;
+	subtext?: string;
+	button?: ButtonInt | null;
 }
 
 const ErrorComp: React.FC<ErrorPageProps> = ({
-	Status = 0,
-	Message = 'Unknown',
-	SubText = 'Unknown Error!',
-	Button = null
+	status = 0,
+	message = 'Unknown',
+	subtext = 'Unknown Error!',
+	button = null
 }) => {
 	return (
 		<section className="flex h-screen items-center p-16">
@@ -26,13 +26,13 @@ const ErrorComp: React.FC<ErrorPageProps> = ({
 				<div className="max-w-md text-center">
 					<h2 className="mb-8 font-monster text-9xl font-extrabold">
 						<span className="sr-only">Error</span>
-						{Status}
+						{status}
 					</h2>
-					<p className="font-monster text-2xl font-semibold md:text-3xl">{Message}</p>
-					<p className="mb-8 mt-4 font-cabin text-foreground/50">{SubText}</p>
+					<p className="font-monster text-2xl font-semibold md:text-3xl">{message}</p>
+					<p className="mb-8 mt-4 font-cabin text-foreground/50">{subtext}</p>
 
-					{Button ? (
-						<ButtonUse onClick={Button.Function}>{Button.Name}</ButtonUse>
+					{button ? (
+						<ButtonUse onClick={button.function}>{button.name}</ButtonUse>
 					) : (
 						<Link href="/">
 							<ButtonUse>Back Home!</ButtonUse>

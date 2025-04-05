@@ -6,9 +6,9 @@ const ErrorPage = () => {
 		<>
 			<SEO title="Page Not Found - Purrquinox" />
 			<ErrorComp
-				Status={404}
-				Message="Page Not Found"
-				SubText="The page you're looking for doesn't exist."
+				status={404}
+				message="Page Not Found"
+				subtext="The page you're looking for doesn't exist."
 			/>
 		</>
 	);

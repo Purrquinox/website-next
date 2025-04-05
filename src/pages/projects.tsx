@@ -1,7 +1,7 @@
 import SEO from '@/components/SEO/SEO';
 import ProjectCard from '@/components/Cards/ProjectCard';
-import { projects as Projects, type ProjectType } from '@/lib/data.ts';
 import PageHeader from '@/components/Layout/PageHeader';
+import { projects as Projects, type ProjectType } from '@/lib/data.ts';
 
 const projectsList: ProjectType[] = Projects.sort((a: ProjectType, b: ProjectType) => {
 	return (b.image != null ? 1 : 0) - (a.image != null ? 1 : 0);
