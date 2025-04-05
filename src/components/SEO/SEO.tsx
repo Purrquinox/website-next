@@ -25,6 +25,23 @@ const Meta = ({
 		}
 	}, [router.asPath]);
 
+	const jsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		name: 'Purrquinox',
+		url: fullUrl || 'https://purrquinox.com',
+		logo: logo,
+		description: description,
+		sameAs: ['https://x.com/heypurrquinox', 'https://mastodon.social/@purrquinox']
+	};
+
+	const websiteLd = {
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'Purrquinox',
+		url: fullUrl || 'https://purrquinox.com'
+	};
+
 	return (
 		<Head>
 			<title>{title}</title>
@@ -71,6 +88,16 @@ const Meta = ({
 
 			{/* Sitemap */}
 			<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+			{/* Structured Data */}
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+			/>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+			/>
 		</Head>
 	);
 };
