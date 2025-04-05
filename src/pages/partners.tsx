@@ -1,5 +1,5 @@
 import SEO from '@/components/SEO/SEO';
-import Card from '@/components/Layout/Card';
+import PartnerCard from '@/components/Layout/PartnerCard';
 import { partners as list, PartnerType } from '@/lib/data.ts';
 import Breadcrumb from '@/components/Layout/Breadcrumb';
 
@@ -22,12 +22,7 @@ const partners = () => {
 					return (
 						<>
 							<div className="mx-3 inline-grid self-auto">
-								<Card
-									name={partner.name}
-									description={partner.description}
-									image={partner.image}
-									link={partner.link}
-								/>
+								<PartnerCard partner={partner} />
 							</div>
 						</>
 					);

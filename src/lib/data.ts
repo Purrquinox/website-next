@@ -11,7 +11,7 @@ interface ProjectType {
 	image: string | null;
 	banner?: string | null;
 	tags: string[];
-	socialLinks?: SocialLink[];
+	socials?: SocialLink[];
 }
 
 const projects: ProjectType[] = [
@@ -22,14 +22,14 @@ const projects: ProjectType[] = [
 		link: 'https://sparkyflight.xyz/',
 		image: 'https://sparkyflight.xyz/logo.png',
 		tags: ['SOCIAL MEDIA'],
-		socialLinks: [
+		socials: [
 			{
 				platform: 'github',
 				url: 'https://github.com/Sparkyflight'
 			},
 			{
 				platform: 'twitter',
-				url: 'https://twitter.com/sparkyflightapp'
+				url: 'https://x.com/sparkyflightapp'
 			},
 			{
 				platform: 'website',
@@ -44,14 +44,14 @@ const projects: ProjectType[] = [
 		link: 'https://antiraid.xyz/',
 		image: 'https://antiraid.xyz/logo.webp',
 		tags: ['DISCORD'],
-		socialLinks: [
+		socials: [
 			{
 				platform: 'github',
 				url: 'https://github.com/Anti-Raid'
 			},
 			{
 				platform: 'twitter',
-				url: 'https://twitter.com/heyantiraid'
+				url: 'https://x.com/heyantiraid'
 			},
 			{
 				platform: 'website',
@@ -65,14 +65,14 @@ const projects: ProjectType[] = [
 		link: 'https://luvix.social/',
 		image: 'https://luvix.social/logo.png',
 		tags: ['Social Media'],
-		socialLinks: [
+		socials: [
 			{
 				platform: 'github',
 				url: 'https://github.com/LuvixSocial'
 			},
 			{
 				platform: 'twitter',
-				url: 'https://twitter.com/heyluvixsocial'
+				url: 'https://x.com/heyluvixsocial'
 			},
 			{
 				platform: 'website',
@@ -111,6 +111,9 @@ interface PartnerType {
 	description: string;
 	link: string;
 	image: string;
+	banner?: string;
+	flairs?: string[];
+	socials?: SocialLink[];
 }
 
 const partners: PartnerType[] = [
@@ -118,7 +121,23 @@ const partners: PartnerType[] = [
 		name: 'Infinity List',
 		description: 'Begin your Discord journey with our extensive directory.',
 		link: 'https://infinitybots.gg/',
-		image: 'https://cdn.infinitybots.gg/core/full_logo.webp'
+		image: 'https://cdn.infinitybots.gg/core/full_logo.webp',
+		banner: 'https://cdn.infinitybots.gg/core/Infinity-Banner-Gradient.webp',
+		flairs: ['Discord Bot List'],
+		socials: [
+			{
+				platform: 'github',
+				url: 'https://github.com/infinitybotlist'
+			},
+			{
+				platform: 'twitter',
+				url: 'https://x.com/heyinfinitybots'
+			},
+			{
+				platform: 'website',
+				url: 'https://infinitybots.gg/'
+			}
+		]
 	}
 ];
 
