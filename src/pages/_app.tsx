@@ -14,6 +14,8 @@ const App = ({ Component, pageProps }: AppProps) => {
 	const [isLoading, setIsLoading] = useState(true);
 	const router = useRouter();
 
+	const noMargin = ['/'];
+
 	useEffect(() => {
 		if (router.pathname !== '/') {
 			setIsLoading(false);
@@ -48,7 +50,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 					<div className="grow">
 						<Header />
 
-						<main className="mt-3">
+						<main className={`${noMargin.includes(router.pathname) ? '' : 'mt-3'}`}>
 							<Component {...pageProps} />
 						</main>
 					</div>

@@ -2,18 +2,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, User } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ShadCN/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ShadCN/sheet';
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuLabel,
-	DropdownMenuSeparator,
-	DropdownMenuTrigger
-} from '@/components/ShadCN/dropdown-menu';
 
 interface Navigation {
 	name: string;
@@ -26,10 +18,6 @@ const navigation: Navigation[] = [
 	{
 		name: 'Home',
 		href: '/'
-	},
-	{
-		name: 'About',
-		href: '/about'
 	},
 	{
 		name: 'Our Team',
