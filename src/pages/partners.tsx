@@ -1,7 +1,7 @@
 import SEO from '@/components/SEO/SEO';
 import PartnerCard from '@/components/Card/PartnerCard';
 import { partners as list, PartnerType } from '@/lib/data.ts';
-import Breadcrumb from '@/components/Layout/Breadcrumb';
+import PageHeader from '@/components/Layout/PageHeader';
 
 const partnerList: PartnerType[] = list.sort((a: PartnerType, b: PartnerType) => {
 	return (b.image != null ? 1 : 0) - (a.image != null ? 1 : 0);
@@ -12,7 +12,7 @@ const partners = () => {
 		<>
 			<SEO title="Partners | Purrquinox" />
 
-			<Breadcrumb
+			<PageHeader
 				title="Our Partners"
 				description="Explore our amazing partners who help us make Purrquinox a reality. We are grateful for their support and collaboration."
 			/>

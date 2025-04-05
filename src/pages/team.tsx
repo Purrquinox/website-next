@@ -1,12 +1,12 @@
 import SEO from '@/components/SEO/SEO';
-import Breadcrumb from '@/components/Layout/Breadcrumb';
+import PageHeader from '@/components/Layout/PageHeader';
 
 const team = () => {
 	return (
 		<>
 			<SEO title="Our Team | Purrquinox" />
 
-			<Breadcrumb
+			<PageHeader
 				title="Our Team"
 				description="Meet the talented individuals behind Purrquinox. We are a diverse group of passionate people dedicated to making a difference in the world of technology."
 			/>

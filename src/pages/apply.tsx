@@ -1,5 +1,5 @@
 'use client';
-import Breadcrumb from '@/components/Layout/Breadcrumb';
+import PageHeader from '@/components/Layout/PageHeader';
 import Meta from '@/components/SEO/SEO';
 import { applications } from '@/lib/data';
 import ApplyPosition from '@/components/Card/ApplyPosition';
@@ -9,7 +9,7 @@ const apply = () => {
 		<>
 			<Meta title="Staff Applications - Purrquinox" />
 
-			<Breadcrumb
+			<PageHeader
 				title="Staff Applications"
 				description="Our team is built on collaboration and shared passion, and we're always looking for dedicated individuals to join us. We value creativity, teamwork, and a drive to make a difference. If you're ready to bring your unique skills to the table, we’d love to hear from you!"
 			/>

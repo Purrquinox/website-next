@@ -1,7 +1,7 @@
 import SEO from '@/components/SEO/SEO';
 import ProjectCard from '@/components/Card/ProjectCard';
 import { projects as Projects, type ProjectType } from '@/lib/data.ts';
-import Breadcrumb from '@/components/Layout/Breadcrumb';
+import PageHeader from '@/components/Layout/PageHeader';
 
 const projectsList: ProjectType[] = Projects.sort((a: ProjectType, b: ProjectType) => {
 	return (b.image != null ? 1 : 0) - (a.image != null ? 1 : 0);
@@ -12,7 +12,7 @@ const projects = () => {
 		<>
 			<SEO title="Projects | Purrquinox" />
 
-			<Breadcrumb
+			<PageHeader
 				title="Our Projects"
 				description="Explore our projects and see what we are working on."
 			/>
