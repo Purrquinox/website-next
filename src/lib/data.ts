@@ -322,7 +322,7 @@ const staffMembers: StaffMember[] = [
 	{
 		name: 'Maya',
 		username: 'ranveersoni',
-		roles: ['Lead Frontend Developer'],
+		roles: ['Lead Frontend Developer of AntiRaid'],
 		image: 'https://maya25-me.vercel.app/_next/image?url=%2Ficon.png&w=640&q=75',
 		socials: [
 			{
