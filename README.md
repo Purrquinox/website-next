@@ -1,40 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Purrquinox
 
-## Getting Started
+Purrquinox is a start-up focused on creating meaningful, practical solutions to real problems. Whether it's tools to enhance community safety or projects that make workflows easier, we put our energy into building things that work and help others. This website focuses on showcasing our projects and providing resources for those interested in learning more about what we do. We believe in the power of technology to make a difference, and we're excited to share our journey with you.
 
-First, run the development server:
+# Tech Stack
+
+Our website utilizes many cutting-edge technologies to provide a seamless user experience. The front-end is built with React, a popular JavaScript library for building user interfaces, and Next.js, a framework that enables server-side rendering and static site generation. We utilize Tailwind CSS for styling, which allows us to create responsive and modern designs quickly. We utilize Framer Motion for animations, which adds a layer of interactivity to our website. With our tech stack, we can create a fast, responsive, and visually appealing website that showcases our projects and resources effectively for you.
+
+# Getting Started
+
+To get started with working on our website, follow these steps:
 
 ```bash
+# Clone the repository
+git clone https://github.com/Purrquinox/website-next
+
+# Installing dependencies
+cd website-next
+npm install
+
+# Running the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the development server, and you can view the website in your browser at `http://localhost:3000`.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# Building for Production
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+To build the website for production, run the following command:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This will create an optimized build of the website in the `.next` directory. You can then serve the production build using:
 
-## Learn More
+```bash
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+# Linting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+We use ESLint to ensure code quality and consistency. To run the linter, use the following command:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run lint
+```
 
-## Deploy on Vercel
+This will check your code for any linting errors and provide suggestions for improvements.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+We welcome contributions to our website! If you have an idea for a new feature or a bug fix, please open an issue or submit a pull request. We appreciate your help in making our website better.
+
+# License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+# Contact
+
+You may contact us at `support@purrquinox.com`.
