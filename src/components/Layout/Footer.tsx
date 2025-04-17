@@ -85,7 +85,7 @@ const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<Card className="mt-12 border-t bg-muted/40 shadow-none">
+		<Card className="bg-muted/40 rounded-none border-t shadow-none">
 			<CardContent className="container mx-auto px-4 py-12">
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-5">
 					{/* Brand Column */}
